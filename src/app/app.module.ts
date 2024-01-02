@@ -12,6 +12,8 @@ import { SearchComponent } from './pages/search/search.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CaroselComponent } from './components/carosel/carosel.component';
+import { DetailsComponent } from './pages/details/details.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { CaroselComponent } from './components/carosel/carosel.component';
     SearchComponent,
     ErrorComponent,
     CaroselComponent,
+    DetailsComponent,
+    SliderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
