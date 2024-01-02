@@ -11,6 +11,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { SearchComponent } from './pages/search/search.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CaroselComponent } from './components/carosel/carosel.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AboutUsComponent,
     SearchComponent,
     ErrorComponent,
+    CaroselComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
