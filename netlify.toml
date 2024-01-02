@@ -1,3 +1,0 @@
-[build]
-  publish = "outstream"
-  command = "npm run build"
