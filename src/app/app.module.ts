@@ -10,6 +10,7 @@ import { EventsComponent } from './pages/events/events.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { SearchComponent } from './pages/search/search.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,10 @@ import { ErrorComponent } from './pages/error/error.component';
     EventsComponent,
     AboutUsComponent,
     SearchComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
