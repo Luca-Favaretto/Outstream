@@ -1,4 +1,5 @@
 :host {
-  height: calc(100vh - 4em);
-  display: block;
+  > div {
+    height: calc(100vh - 4em);
+  }
 }
