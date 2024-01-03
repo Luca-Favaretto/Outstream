@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaroselComponent implements OnInit {
   constructor() {}
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+
+  images = [3, 4, 5, 6, 7, 8, 9].map(
+    (n) => `../../../assets/Page Presentation/${n}.jpg`
+  );
   ngOnInit(): void {}
 }
