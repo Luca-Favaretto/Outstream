@@ -15,6 +15,7 @@
 /* Per i browser WebKit (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 5px; /* Larghezza della scrollbar */
+  height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -35,6 +36,7 @@
 /* Questo stile è un fallback generico */
 ::-moz-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-moz-scrollbar-thumb {
