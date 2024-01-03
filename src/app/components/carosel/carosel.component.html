@@ -1,65 +1,44 @@
 <ngb-carousel>
-  <ng-template ngbSlide>
+  <ng-template ngbSlide *ngIf="images.length > 0">
     <div class="picsum-img-wrapper">
       <img [src]="images[0]" class="w-100" alt="Random first slide" />
     </div>
-    <div class="carousel-caption">
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </div>
+    <div class="carousel-caption"></div>
   </ng-template>
-  <ng-template ngbSlide>
+  <ng-template ngbSlide *ngIf="images.length > 1">
     <div class="picsum-img-wrapper">
       <img [src]="images[1]" class="w-100" alt="Random second slide" />
     </div>
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
+    <div class="carousel-caption"></div>
   </ng-template>
-  <ng-template ngbSlide>
+  <ng-template ngbSlide *ngIf="images.length > 2">
     <div class="picsum-img-wrapper">
       <img [src]="images[2]" class="w-100" alt="Random third slide" />
     </div>
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
+    <div class="carousel-caption"></div>
   </ng-template>
-  <ng-template ngbSlide>
+  <ng-template ngbSlide *ngIf="images.length > 3">
     <div class="picsum-img-wrapper">
       <img [src]="images[3]" class="w-100" alt="Random third slide" />
     </div>
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
+    <div class="carousel-caption"></div>
   </ng-template>
-  <ng-template ngbSlide>
+  <ng-template ngbSlide *ngIf="images.length > 4">
     <div class="picsum-img-wrapper">
       <img [src]="images[4]" class="w-100" alt="Random third slide" />
     </div>
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
+    <div class="carousel-caption"></div>
   </ng-template>
-  <ng-template ngbSlide>
+  <ng-template ngbSlide *ngIf="images.length > 5">
     <div class="picsum-img-wrapper">
       <img [src]="images[5]" class="w-100" alt="Random third slide" />
     </div>
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
+    <div class="carousel-caption"></div>
   </ng-template>
-  <ng-template ngbSlide>
+  <ng-template ngbSlide *ngIf="images.length > 6">
     <div class="picsum-img-wrapper">
       <img [src]="images[6]" class="w-100" alt="Random third slide" />
     </div>
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
+    <div class="carousel-caption"></div>
   </ng-template>
 </ngb-carousel>

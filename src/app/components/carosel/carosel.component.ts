@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carosel',
@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaroselComponent implements OnInit {
   constructor() {}
+  @Input() images: number[] | string[] = [];
 
-  images = [3, 4, 5, 6, 7, 8, 9].map(
-    (n) => `../../../assets/Page Presentation/${n}.jpg`
-  );
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.images);
+    this.images = this.images.map(
+      (n) => `../../../assets/Page Presentation/${n}.jpg`
+    );
+  }
 }
