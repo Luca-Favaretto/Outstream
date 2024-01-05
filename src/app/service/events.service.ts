@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Event } from './event';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EventsService {
   constructor() {}
-  evets = [
+  events: Event[] = [
     {
       id: 1,
       personaggio: {
@@ -24,7 +26,232 @@ export class EventsService {
       numeroInformazioni: 3454647897,
       mailInformazioni: 'tosatto@gmail.com',
       nomeEvento: 'Torna libero in 3 mosse',
-      poster: '',
+      poster: '1',
+      prezzo: 19.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'politica',
+    },
+    {
+      id: 2,
+      personaggio: {
+        nome: 'Luca Giorgioni',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 30000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '11/11/23',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '2',
+      prezzo: 29.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'commedia',
+    },
+    {
+      id: 3,
+      personaggio: {
+        nome: 'Massimo Brunelli',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 70000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '23/02/24',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '3',
+      prezzo: 19.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'politica',
+    },
+    {
+      id: 4,
+      personaggio: {
+        nome: 'Quinto Miglio',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 40000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '11/11/23',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '4',
+      prezzo: 39.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'politica',
+    },
+    {
+      id: 5,
+      personaggio: {
+        nome: 'Ricky Albiero',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 10000000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '11/11/23',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '5',
+      prezzo: 49.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'Arte',
+    },
+    {
+      id: 6,
+      personaggio: {
+        nome: 'Michele Bragantini',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 70000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '11/11/23',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '6',
+      prezzo: 19.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'Arte',
+    },
+    {
+      id: 7,
+      personaggio: {
+        nome: 'Massimo Brunelli',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 700000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '11/11/23',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '7',
+      prezzo: 109.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'politica',
+    },
+    {
+      id: 8,
+      personaggio: {
+        nome: 'Michele Bragantini',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 70000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '11/11/23',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '8',
+      prezzo: 19.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'Arte',
+    },
+    {
+      id: 9,
+      personaggio: {
+        nome: 'Andrea Tosatto',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 70000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '11/11/23',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '9',
+      prezzo: 19.99,
+      descrizione: 'testo',
+      organizzatore: 'Itali',
+      linkAquisto: 'http:www.sito.com',
+      genere: 'politica',
+    },
+    {
+      id: 10,
+      personaggio: {
+        nome: 'Andrea Tosatto',
+        instagramAutore: 'https://www.instagram.com/andreatosatto_live/',
+        facebook: 'https://www.instagram.com/andreatosatto_live/',
+        youtube: 'https://www.instagram.com/andreatosatto_live/',
+        telegram: 'https://www.instagram.com/andreatosatto_live/',
+        seguaci: 70000,
+      },
+      regione: 'Veneto',
+      location: 'Tetre Ristori',
+      via: 'strada privata 23',
+      data: '11/11/23',
+      ora: '21.00',
+      numeroInformazioni: 3454647897,
+      mailInformazioni: 'tosatto@gmail.com',
+      nomeEvento: 'Torna libero in 3 mosse',
+      poster: '10',
       prezzo: 19.99,
       descrizione: 'testo',
       organizzatore: 'Itali',
@@ -32,4 +259,27 @@ export class EventsService {
       genere: 'politica',
     },
   ];
+  getEvents(): Observable<Event[]> {
+    return of(this.events);
+  }
+
+  getEvent(id: number): Observable<Event[]> {
+    const event = this.events.find((event) => event.id === id);
+    return of(event ? [event] : []);
+  }
+  searchEvents(query: string): Observable<Event[]> {
+    query = query.toLowerCase();
+    const matchingEvents = this.events.filter((event) => {
+      // Puoi personalizzare la tua logica di ricerca qui
+      return (
+        event.nomeEvento.toLowerCase().includes(query) ||
+        event.descrizione.toLowerCase().includes(query) ||
+        event.genere.toLowerCase().includes(query) ||
+        event.personaggio.nome.toLowerCase().includes(query)
+        // Aggiungi altri campi che desideri includere nella ricerca
+      );
+    });
+
+    return of(matchingEvents);
+  }
 }

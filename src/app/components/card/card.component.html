@@ -1,14 +1,14 @@
 <div class="card">
   <img
-    [src]="'../../../assets/Locandine/' + event + '.jpg'"
+    [src]="'../../../assets/Locandine/' + event.poster + '.jpg'"
+    [alt]="event.nomeEvento"
     class="card-img-top w-100 object-fit-cover"
   />
   <div class="card-body">
-    <h5 class="card-title">Titolo Evento</h5>
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </p>
-    <a [routerLink]="['1']" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">{{ event.nomeEvento }}</h5>
+
+    <a [routerLink]="['/dettaglio', event.id]" class="btn btn-primary"
+      >Vai a dettaglio</a
+    >
   </div>
 </div>
