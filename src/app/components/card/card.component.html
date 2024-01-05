@@ -6,6 +6,7 @@
   />
   <div class="card-body">
     <h5 class="card-title">{{ event.nomeEvento }}</h5>
+    <p class="card-title">{{ event.personaggio.nome }}</p>
 
     <a [routerLink]="['/dettaglio', event.id]" class="btn btn-primary"
       >Vai a dettaglio</a
